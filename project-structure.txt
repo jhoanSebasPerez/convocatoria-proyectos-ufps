@@ -26,7 +26,3 @@ src
 │   ├── react-query.ts
 │   └── utils.ts
 └── project-structure.txt
-
-
-
-
