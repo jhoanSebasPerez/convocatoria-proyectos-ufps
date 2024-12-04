@@ -18,7 +18,6 @@ import {
     Card,
     CardContent,
     CardDescription,
-    CardFooter,
     CardHeader,
     CardTitle,
 } from "@/components/ui/card"
@@ -30,13 +29,6 @@ import {
     DialogTitle,
     DialogTrigger,
 } from "@/components/ui/dialog"
-import {
-    Select,
-    SelectContent,
-    SelectItem,
-    SelectTrigger,
-    SelectValue,
-} from "@/components/ui/select"
 
 interface RatedProject {
     id: string
@@ -103,7 +95,7 @@ export default function EvaluatorRatedProjectsPage() {
     const [selectedProject, setSelectedProject] = useState<RatedProject | null>(null)
 
     const sortedProjects = React.useMemo(() => {
-        let sortableProjects = [...mockRatedProjects]
+        const sortableProjects = [...mockRatedProjects]
         if (sortConfig !== null) {
             sortableProjects.sort((a, b) => {
                 if (a[sortConfig.key] < b[sortConfig.key]) {

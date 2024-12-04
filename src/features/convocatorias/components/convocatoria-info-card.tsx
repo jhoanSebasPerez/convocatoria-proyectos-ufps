@@ -21,7 +21,7 @@ export default function ConvocatoriaInfoCard({ convocatoria, addProyectoButton }
     }
 
     return (
-        <Card className="flex">
+        <Card className="flex py-4">
             <CardHeader>
                 <div className="flex justify-between items-center">
                     <div>

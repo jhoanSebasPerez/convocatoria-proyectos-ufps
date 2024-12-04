@@ -2,6 +2,7 @@
 
 import { createContext, useContext, useEffect, useState } from 'react';
 import { roles } from '../constansts';
+import { LoginResponseType } from '../schemas/login-response-schema';
 
 interface AuthContextType {
     token: string | null;

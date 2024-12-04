@@ -3,7 +3,6 @@
 import * as React from 'react'
 import Link from 'next/link'
 import { usePathname } from "next/navigation";
-import { BarChart3, FolderKanban, Trophy, Users } from 'lucide-react';
 
 interface ResponsiveSidebarProps {
     routes: Record<string, { url: string; name: string; icon: React.ReactNode }>;

@@ -6,7 +6,7 @@ import { Header } from "@/components/ui/header";
 import { ResponsiveSidebar } from "@/components/ui/responsive-sidebar";
 
 import { SidebarInset, SidebarProvider } from "@/components/ui/sidebar";
-import { Archive, FolderKanban, Trophy, Users } from 'lucide-react';
+import { Archive, FolderKanban, Trophy } from 'lucide-react';
 import React from "react";
 
 const estudianteRoutes = {

@@ -3,6 +3,7 @@ import { BASE_URL } from "@/core/environment";
 import axios from "axios";
 import { signInFormSchema } from '../schemas/sign-in-schema';
 import { z } from "zod";
+import { LoginResponseType } from "../schemas/login-response-schema";
 
 export const useLogin = () => {
 

@@ -40,7 +40,7 @@ const allowedDomain = "ufps.edu.co"
 
 export const SignInCard = () => {
     const [showPassword, setShowPassword] = useState(false)
-    const [error, setError] = useState<string | null>(null)
+    const [error] = useState<string | null>(null)
     const router = useRouter();
     const { mutate, isPending } = useLogin();
     const { login, isAuthenticated, role } = useAuth();

@@ -1,7 +1,6 @@
 import { useMutation } from "@tanstack/react-query";
 import { BASE_URL } from "@/core/environment";
 import axios from "axios";
-import { User } from "../types/user";
 import { Rol } from "../types/rol";
 
 

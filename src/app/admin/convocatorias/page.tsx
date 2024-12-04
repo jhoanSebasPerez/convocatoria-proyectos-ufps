@@ -28,7 +28,7 @@ export default function ConvocatoriasPage() {
             <div className="flex justify-end mb-8">
                 <DialogConvocatoria refetch={refetch} />
             </div>
-            <div className="flex gap-4">
+            <div className="flex flex-wrap gap-4">
                 {data?.map((convocatoria) => (
                     <ConvocatoriaInfoCard addProyectoButton={false} key={convocatoria.id_convocatoria} convocatoria={convocatoria} />
                 ))}

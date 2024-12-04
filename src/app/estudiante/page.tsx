@@ -1,6 +1,5 @@
 "use client";
 
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { useGetConvocatorias } from "@/features/convocatorias/api/use-get-convocatorias";
 import ConvocatoriaInfoCard from "@/features/convocatorias/components/convocatoria-info-card";
 import { useEffect } from "react";
@@ -28,7 +27,7 @@ export default function EstudiantePage() {
                 <h1 className="font-bold text-xl">Convocatorias disponibles</h1>
                 <span className="text-sm">Encuentra aquí las convocatorias disponibles para participar</span>
             </div>
-            <div className="w-full flex gap-4 flex-wrap">
+            <div className="w-full flex flex-wrap gap-4">
                 {data?.map((convocatoria) => (
                     <ConvocatoriaInfoCard addProyectoButton key={convocatoria.id_convocatoria} convocatoria={convocatoria} />
                 ))}

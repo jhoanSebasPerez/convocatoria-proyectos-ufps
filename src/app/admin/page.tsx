@@ -1,33 +1,23 @@
 'use client'
 
 import * as React from 'react'
-import Link from 'next/link'
-import { BarChart3, Users, FolderKanban, Trophy, Bell, Search } from 'lucide-react'
+import { BarChart3, Users, FolderKanban, Trophy } from 'lucide-react'
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
-import {
-    DropdownMenu,
-    DropdownMenuContent,
-    DropdownMenuItem,
-    DropdownMenuLabel,
-    DropdownMenuSeparator,
-    DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu"
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
+import { Avatar, AvatarFallback, } from "@/components/ui/avatar"
 
 // Mock data for demonstration purposes
 const recentProjects = [
-    { id: 1, name: "AI Research Project", status: "In Progress" },
-    { id: 2, name: "Web App Development", status: "Completed" },
-    { id: 3, name: "Data Analysis Study", status: "On Hold" },
+    { id: 1, name: "Proyecto plataforma web para gestión de inventario", status: "En proceso" },
+    { id: 2, name: "Proyecto semillero IA creación de agente para educación", status: "Completado" },
+    { id: 3, name: "Proyecto de analisis de datos del sector automotriz", status: "En ejecución" },
 ]
 
 const upcomingCompetitions = [
-    { id: 1, name: "Global Innovation Challenge", date: "2024-06-15" },
-    { id: 2, name: "Sustainability Hackathon", date: "2024-07-01" },
-    { id: 3, name: "AI for Good Competition", date: "2024-08-10" },
+    { id: 1, name: "Convocatoria proyectos de aula 2023", date: "2024-06-15" },
+    { id: 2, name: "Convocatoria proyectos semillero de programación web", date: "2024-07-01" },
+    { id: 3, name: "Convocatoria proyectos semillero de IA", date: "2024-08-10" },
 ]
 
 export default function DashboardPage() {
@@ -36,42 +26,42 @@ export default function DashboardPage() {
             <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
                 <Card>
                     <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-                        <CardTitle className="text-sm font-medium">Total Projects</CardTitle>
+                        <CardTitle className="text-sm font-medium">Proyectos totales</CardTitle>
                         <FolderKanban className="h-4 w-4 text-muted-foreground" />
                     </CardHeader>
                     <CardContent>
-                        <div className="text-2xl font-bold">25</div>
-                        <p className="text-xs text-muted-foreground">+2 from last month</p>
+                        <div className="text-2xl font-bold">5</div>
+                        <p className="text-xs text-muted-foreground">+2 desde el último mes</p>
                     </CardContent>
                 </Card>
                 <Card>
                     <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-                        <CardTitle className="text-sm font-medium">Active Competitions</CardTitle>
+                        <CardTitle className="text-sm font-medium">Convocatorias activas</CardTitle>
                         <Trophy className="h-4 w-4 text-muted-foreground" />
                     </CardHeader>
                     <CardContent>
                         <div className="text-2xl font-bold">3</div>
-                        <p className="text-xs text-muted-foreground">1 ending this week</p>
+                        <p className="text-xs text-muted-foreground">1 finaliza esta semana</p>
                     </CardContent>
                 </Card>
                 <Card>
                     <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-                        <CardTitle className="text-sm font-medium">Total Users</CardTitle>
+                        <CardTitle className="text-sm font-medium">Usuarios totales</CardTitle>
                         <Users className="h-4 w-4 text-muted-foreground" />
                     </CardHeader>
                     <CardContent>
-                        <div className="text-2xl font-bold">1,234</div>
-                        <p className="text-xs text-muted-foreground">+7% from last month</p>
+                        <div className="text-2xl font-bold">8</div>
+                        <p className="text-xs text-muted-foreground">+7% desde el último mes</p>
                     </CardContent>
                 </Card>
                 <Card>
                     <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-                        <CardTitle className="text-sm font-medium">Completion Rate</CardTitle>
+                        <CardTitle className="text-sm font-medium">Tasa de finalización</CardTitle>
                         <BarChart3 className="h-4 w-4 text-muted-foreground" />
                     </CardHeader>
                     <CardContent>
                         <div className="text-2xl font-bold">78%</div>
-                        <p className="text-xs text-muted-foreground">+2% from last month</p>
+                        <p className="text-xs text-muted-foreground">+2% desde el último mes</p>
                     </CardContent>
                 </Card>
             </div>
@@ -79,7 +69,7 @@ export default function DashboardPage() {
             <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-7 mt-4">
                 <Card className="col-span-4">
                     <CardHeader>
-                        <CardTitle>Recent Projects</CardTitle>
+                        <CardTitle>Proyectos recientes</CardTitle>
                     </CardHeader>
                     <CardContent>
                         <div className="space-y-8">
@@ -104,9 +94,9 @@ export default function DashboardPage() {
                 </Card>
                 <Card className="col-span-3">
                     <CardHeader>
-                        <CardTitle>Upcoming Competitions</CardTitle>
+                        <CardTitle>Próximas convocatorias</CardTitle>
                         <CardDescription>
-                            Don't miss out on these opportunities!
+                            No te pierdas las próximas convocatorias
                         </CardDescription>
                     </CardHeader>
                     <CardContent>

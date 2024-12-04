@@ -1,4 +1,4 @@
-interface LoginResponseType {
+export interface LoginResponseType {
     token: string;
     success: boolean;
     data: {
